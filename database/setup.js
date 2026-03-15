@@ -55,3 +55,5 @@ async function setupDatabase() {
 }
 
 setupDatabase();
+
+module.exports = { sequelize, Track };
