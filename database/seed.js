@@ -1,4 +1,5 @@
 // Import database and model
+const { sequelize, Track } = require('./setup');
 
 // Seed data
 const sampleTracks = [
