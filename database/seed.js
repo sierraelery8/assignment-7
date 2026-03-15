@@ -101,3 +101,20 @@ const sampleTracks = [
 ];
 
 // Seed database with sample data
+async function seedDatabase() {
+  try {
+
+    await sequelize.sync();
+
+    await Track.bulkCreate(sampleTracks);
+
+    console.log("Database seeded successfully!");
+
+  } catch (error) {
+    console.error("Error seeding database:", error);
+  } finally {
+    await sequelize.close();
+  }
+}
+
+seedDatabase();
